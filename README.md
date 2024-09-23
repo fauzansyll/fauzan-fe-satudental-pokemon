@@ -25,6 +25,9 @@ bun dev
 
 ```
 
+# API 
+Create env file and use https://pokeapi.co/api/v2 as primary, there's some functions to handle fetching along with the API
+
 Open http://localhost:3000 with your browser to see the result.
 
 ## Technology Stack
@@ -37,9 +40,6 @@ Open http://localhost:3000 with your browser to see the result.
 # Unused Stack
 this unused stack is installed on purpose due to potential usage in the future
 - [SASS](https://sass-lang.com/)
-
-## API 
-Create env file and use https://pokeapi.co/api/v2 as primary, there's some functions to handle fetching along with the API
 
 ## Project Structure
 
