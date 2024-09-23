@@ -15,7 +15,7 @@ import Filters from "../molecules/filters";
 import { AppContextType, PokemonDetail } from "@/lib/interface";
 
 const Pokedex = () => {
-  const { data, setPokedex, setTotal, pokedex, currentPage, setCurrentPage } =
+  const { data, setPokedex, setTotal, currentPage, setCurrentPage } =
     useContext(AppContext) as AppContextType;
   const [book, setBook] = useState<string[]>([]);
   const [search, setSearch] = useState("");

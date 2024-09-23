@@ -1,16 +1,13 @@
 import Image from "next/image";
 
 import React from "react";
-import { useRouter } from "next/router";
 
 import Button from "./button";
 import { CardProps } from "@/lib/interface";
 
 const Card: React.FC<CardProps> = ({
   name,
-  types,
-  stats,
-  abilities,
+
   sprites,
   onClick,
   actions,

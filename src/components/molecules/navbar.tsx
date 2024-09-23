@@ -8,7 +8,6 @@ import { AppContextType } from "@/lib/interface";
 
 const Navbar = () => {
   const { total } = useContext(AppContext) as AppContextType;
-
   const [windowDimensions, setWindowDimensions] = useState({
     width: 0,
     height: 0,
@@ -22,7 +21,7 @@ const Navbar = () => {
           height: window.innerHeight,
         });
         {
-          windowDimensions;
+          windowDimensions.width < 768;
         }
       }, 1000);
 
