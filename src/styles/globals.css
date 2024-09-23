@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #171717;
+  --foreground: #ffffff;
+}
+
+body {
+  font-family: "Big Shoulders Display", sans-serif;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
