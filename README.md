@@ -7,6 +7,20 @@ The Website : https://pokemon-fauzan.vercel.app/
 ## Introduction
 This documentation provides an overview of the Pokemon website, which features a paginated list of Pokémon and a Pokedex functionality similar to a shopping cart.
 
+## How to run locally
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open http://localhost:3000 with your browser to see the result.
+
 ## Technology Stack
 - [Next.js](https://nextjs.org)
 - [Axios](https://axios-http.com/docs/intro)
@@ -44,6 +58,9 @@ Notes: All interfaces/types stored in one file
 - Using pagination controls
 - Adding Pokémon to the Pokédex
 - Removing Pokémon from the Pokédex
+
+## Future Development
+With the given time, I've met the requirement that outlined/mentioned but there's some improvement could be make like more reusable components to avoid repeating, I've asked my several close friends that has no technology background to get user feedbacks as soon as possible to tackle user-friendly problem and yet they suggested some minor improvements like button to read more some other suggestions. I've adapted clean code but its not done yet but implemented, because I am focusing on web performance as well to tackle user-friendly problem, maybe with additonal times would be wise to meet perfectly desired website
 
 <img width="1403" alt="Screenshot 2024-09-23 at 09 38 33" src="https://github.com/user-attachments/assets/4e3c9579-50be-4399-8d2b-11ebe31ef182">
 
