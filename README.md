@@ -17,19 +17,8 @@ this unused stack is installed on purpose due to potential usage in the future
 - [SASS](https://sass-lang.com/)
 
 ## Project Structure
-- src/
--   components/
--     atoms/
--     molecules/
--     organisms/
--     pages/
--   pages/
--     detail/
--     pokedex/
--   libs/
--   styles/
--     pokedex/
--   utils/
+
+<img width="195" alt="Screenshot 2024-09-23 at 09 43 06" src="https://github.com/user-attachments/assets/adf776aa-668c-4ead-bec2-adf2db55b87a">
 
 Notes: All interfaces/types stored in one file
 
@@ -37,6 +26,7 @@ Notes: All interfaces/types stored in one file
 
 - Catalog: Display a list of Pokemon with pagination controls
 - Pokedex: Add and remove Pokemon from a Pokedex, similar to a shopping cart
+- Detail: Analize a pokemon with their additional stats (Background is vary due to their type)
 
 ## Styling
 
