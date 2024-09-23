@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import { debounce } from "lodash";
+import React, { useContext } from "react";
+
 import Image from "next/image";
 import { AppContext } from "@/pages/_app";
 import { SmallBox } from "../atoms/box";
