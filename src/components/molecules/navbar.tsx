@@ -8,29 +8,6 @@ import { AppContextType } from "@/lib/interface";
 
 const Navbar = () => {
   const { total } = useContext(AppContext) as AppContextType;
-  const [windowDimensions, setWindowDimensions] = useState({
-    width: 0,
-    height: 0,
-  });
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleResize = debounce(() => {
-        setWindowDimensions({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-        {
-          windowDimensions.width < 768;
-        }
-      }, 1000);
-
-      handleResize();
-
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }
-  }, []);
 
   return (
     <Link href={"/pokedex"}>
