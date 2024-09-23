@@ -18,6 +18,9 @@ This documentation provides an overview of the Pokemon website, which features a
 this unused stack is installed on purpose due to potential usage in the future
 - [SASS](https://sass-lang.com/)
 
+## API 
+Create env file and use https://pokeapi.co/api/v2 as primary, there's some functions to handle fetching along with the API
+
 ## Project Structure
 
 <img width="195" alt="Screenshot 2024-09-23 at 09 43 06" src="https://github.com/user-attachments/assets/adf776aa-668c-4ead-bec2-adf2db55b87a">
