@@ -17,6 +17,10 @@ yarn dev
 pnpm dev
 # or
 bun dev
+
+#then 
+npm install 
+#to install all deppendencies
 ```
 
 Open http://localhost:3000 with your browser to see the result.
