@@ -24,8 +24,6 @@ pnpm dev
 bun dev
 
 ```
-
-# API 
 Create env file and use https://pokeapi.co/api/v2 as primary, there's some functions to handle fetching along with the API
 
 Open http://localhost:3000 with your browser to see the result.
