@@ -18,18 +18,18 @@ this unused stack is installed on purpose due to potential usage in the future
 
 ## Project Structure
 src/
-├── components/
-│   ├── atoms/
-│   ├── molecules/
-│   ├── organisms/
-│   └── pages/
-├── pages/
-│   ├── detail/
-│   └── pokedex/
-├── libs/
-├── styles/
-│   └── pokedex/
-└── utils/
+  components/
+    atoms/
+    molecules/
+    organisms/
+    pages/
+  pages/
+    detail/
+    pokedex/
+  libs/
+  styles/
+    pokedex/
+  utils/
 
 Notes: All interfaces/types stored in one file
 
