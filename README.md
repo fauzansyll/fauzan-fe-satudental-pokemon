@@ -9,7 +9,12 @@ This documentation provides an overview of the Pokemon website, which features a
 
 ## How to run locally
 
+After work/clone please do
 ```bash
+npm install 
+#to install all deppendencies
+
+#tyhen
 npm run dev
 # or
 yarn dev
@@ -18,9 +23,6 @@ pnpm dev
 # or
 bun dev
 
-#then 
-npm install 
-#to install all deppendencies
 ```
 
 Open http://localhost:3000 with your browser to see the result.
