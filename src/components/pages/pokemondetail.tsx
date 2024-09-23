@@ -1,19 +1,16 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { PokemonDetail } from "@/lib/interface";
 import { AppContextType } from "@/lib/interface";
 import Image from "next/image";
 import Template from "@/components/atoms/template";
 import { AppContext } from "@/pages/_app";
-import Toast from "../atoms/toast";
-import Link from "next/link";
 
 const Detail = () => {
   const router = useRouter();
   const { data } = useContext(AppContext) as AppContextType;
   const [filteredItems, setFilteredItems] = useState<PokemonDetail[]>([]);
   const [tipe, setTipe] = useState<string>("");
-  const [toastMessage, setToastMessage] = useState("Back to Catalog");
 
   useEffect(() => {
     const slug = Array.isArray(router.query.slug)

@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { InputText, SelectInput } from "../atoms/input";
+import React from "react";
+import { InputText } from "../atoms/input";
 import { InputTextProps } from "@/lib/interface";
 
 const Filters: React.FC<InputTextProps> = ({ value, setSearch, text }) => {

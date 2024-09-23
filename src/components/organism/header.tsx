@@ -1,8 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Template from "../atoms/template";
 import Logo from "../atoms/logo";
 import Navbar from "../molecules/navbar";
-import Image from "next/image";
 
 const Header = () => {
   return (

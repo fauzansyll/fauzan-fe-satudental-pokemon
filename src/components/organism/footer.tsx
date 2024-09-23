@@ -1,6 +1,5 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import Template from "../atoms/template";
-import Image from "next/image";
 import Logo from "../atoms/logo";
 import { InputText } from "../atoms/input";
 import Button from "../atoms/button";
@@ -27,24 +26,24 @@ const Footer = () => {
             <h1 className="text-xl font-bold">Explore</h1>
             <ul className="mt-2 space-y-1">
               <li>
-                <a href="/pokedex" className="hover:text-neored-300">
+                <Link href="/pokedex" className="hover:text-neored-300">
                   Pokédex
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/regions" className="hover:text-neored-300">
+                <Link href="/regions" className="hover:text-neored-300">
                   Regions
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/trainers" className="hover:text-neored-300">
+                <Link href="/trainers" className="hover:text-neored-300">
                   Trainers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/battles" className="hover:text-neored-300">
+                <Link href="/battles" className="hover:text-neored-300">
                   Battles
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

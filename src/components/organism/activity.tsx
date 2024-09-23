@@ -1,14 +1,7 @@
 import { LIMIT_PER_PAGE } from "@/lib/constants";
 import { AppContext } from "@/pages/_app";
 import { useRouter } from "next/router";
-import {
-  Fragment,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-  useMemo,
-} from "react";
+import { useCallback, useContext, useEffect, useState, useMemo } from "react";
 import Template from "../atoms/template";
 import Button from "../atoms/button";
 import Card from "../atoms/card";
@@ -22,7 +15,7 @@ const Activity = () => {
     setPokedex,
     pokedex,
     setTotal,
-    total,
+
     setCurrentPage,
     currentPage,
   } = useContext(AppContext) as AppContextType;
@@ -104,8 +97,6 @@ const Activity = () => {
   }, [setCurrentPage]);
 
   useEffect(() => {
-    const storedPage = localStorage.getItem("currentPage");
-
     if (search !== "") {
       setCurrentPage(1);
       localStorage.setItem("currentPage", "1");

@@ -7,7 +7,7 @@ import {
 } from "@/lib/interface";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { createContext, useEffect, useState, ReactNode, useMemo } from "react";
+import { createContext, useEffect, useState, useMemo } from "react";
 
 export const AppContext = createContext<AppContextType | undefined>(undefined);
 

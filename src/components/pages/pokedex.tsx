@@ -1,6 +1,5 @@
 import { AppContext } from "@/pages/_app";
 import React, {
-  Fragment,
   useCallback,
   useContext,
   useEffect,
@@ -14,16 +13,12 @@ import Button from "../atoms/button";
 import { LIMIT_PER_PAGE } from "@/lib/constants";
 import Filters from "../molecules/filters";
 import { AppContextType, PokemonDetail } from "@/lib/interface";
-import Link from "next/link";
-import Toast from "../atoms/toast";
-import Image from "next/image";
 
 const Pokedex = () => {
   const { data, setPokedex, setTotal, pokedex, currentPage, setCurrentPage } =
     useContext(AppContext) as AppContextType;
   const [book, setBook] = useState<string[]>([]);
   const [search, setSearch] = useState("");
-  const [toastMessage, setToastMessage] = useState("Back to Catalog");
 
   useEffect(() => {
     const storedPokedex = localStorage.getItem("Pokedex");

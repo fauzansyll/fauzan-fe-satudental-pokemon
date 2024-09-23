@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { debounce } from "lodash";
 import Image from "next/image";
 import { AppContext } from "@/pages/_app";
@@ -21,6 +21,9 @@ const Navbar = () => {
           width: window.innerWidth,
           height: window.innerHeight,
         });
+        {
+          windowDimensions;
+        }
       }, 1000);
 
       handleResize();

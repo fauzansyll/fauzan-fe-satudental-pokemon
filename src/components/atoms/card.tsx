@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
-import React, { Fragment, useContext } from "react";
+
+import React from "react";
 import { useRouter } from "next/router";
-import { AppContext } from "@/pages/_app";
+
 import Button from "./button";
 import { CardProps } from "@/lib/interface";
 
@@ -20,8 +20,6 @@ const Card: React.FC<CardProps> = ({
     if (!str) return str;
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
-
-  const router = useRouter();
 
   const newName = capitalizeFirstLetter(name);
 
