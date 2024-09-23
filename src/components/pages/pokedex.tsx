@@ -15,15 +15,18 @@ import Filters from "../molecules/filters";
 import { AppContextType, PokemonDetail } from "@/lib/interface";
 
 const Pokedex = () => {
-  const { data, setPokedex, setTotal, currentPage, setCurrentPage } =
-    useContext(AppContext) as AppContextType;
+  const { data, setPokedex, setTotal } = useContext(
+    AppContext
+  ) as AppContextType;
   const [book, setBook] = useState<string[]>([]);
   const [search, setSearch] = useState("");
+  const [pokedexPage, setPokedexPage] = useState(1);
 
   useEffect(() => {
     const storedPokedex = localStorage.getItem("Pokedex");
     const storedTotal = localStorage.getItem("total");
     const storedSearch = localStorage.getItem("pokedexSearch");
+    const storedPokedexPage = localStorage.getItem("pokedexPage");
 
     if (storedPokedex) {
       const parsedPokedex = JSON.parse(storedPokedex);
@@ -37,6 +40,10 @@ const Pokedex = () => {
 
     if (storedSearch) {
       setSearch(storedSearch);
+    }
+
+    if (storedPokedexPage) {
+      setPokedexPage(Number(storedPokedexPage));
     }
   }, []);
 
@@ -86,38 +93,33 @@ const Pokedex = () => {
   );
 
   useEffect(() => {
-    const storedPage = localStorage.getItem("currentPage");
-    setCurrentPage(storedPage ? Number(storedPage) : 1);
-  }, [setCurrentPage]);
-
-  useEffect(() => {
     if (search !== "") {
-      setCurrentPage(1);
-      localStorage.setItem("currentPage", "1");
+      setPokedexPage(1);
+      localStorage.setItem("pokedexPage", "1");
     }
   }, [search]);
 
   const currentItems = useMemo<PokemonDetail[]>(() => {
-    const startIndex = (currentPage - 1) * itemsPerPage;
+    const startIndex = (pokedexPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     return (finalBook || []).slice(startIndex, endIndex);
-  }, [finalBook, currentPage, itemsPerPage]);
+  }, [finalBook, pokedexPage, itemsPerPage]);
 
   const totalPages = Math.ceil((finalBook?.length || 0) / itemsPerPage);
 
   const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      const nextPage = currentPage + 1;
-      setCurrentPage(nextPage);
-      localStorage.setItem("currentPage", nextPage.toString());
+    if (pokedexPage < totalPages) {
+      const nextPage = pokedexPage + 1;
+      setPokedexPage(nextPage);
+      localStorage.setItem("pokedexPage", nextPage.toString());
     }
   };
 
   const handlePrevPage = () => {
-    if (currentPage > 1) {
-      const prevPage = currentPage - 1;
-      setCurrentPage(prevPage);
-      localStorage.setItem("currentPage", prevPage.toString());
+    if (pokedexPage > 1) {
+      const prevPage = pokedexPage - 1;
+      setPokedexPage(prevPage);
+      localStorage.setItem("pokedexPage", prevPage.toString());
     }
   };
 
@@ -147,13 +149,13 @@ const Pokedex = () => {
                 />
               ))
             ) : (
-              <p>No Pokémon in your Pokedex</p>
+              <p>No Pokemon in your Pokedex</p>
             )}
           </div>
           <div className="flex w-full justify-center text-xs items-center gap-5 mt-5">
             <Button
               color="neoyellow"
-              disabled={currentPage === 1}
+              disabled={pokedexPage === 1}
               type="medium"
               onClick={handlePrevPage}
               size="sm"
@@ -162,13 +164,13 @@ const Pokedex = () => {
             </Button>
 
             <p className="text-sm">
-              Page {currentPage} of {totalPages}
+              Page {pokedexPage} of {totalPages}
             </p>
 
             <Button
               size="sm"
               color="neoyellow"
-              disabled={currentPage === totalPages}
+              disabled={pokedexPage === totalPages}
               type="medium"
               onClick={handleNextPage}
             >

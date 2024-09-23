@@ -34,7 +34,7 @@ const Detail = () => {
   }, [router.query.slug, data]);
 
   if (!filteredItems.length) {
-    return <p>No Pokémon Found</p>;
+    return <p>No Pokemon Found</p>;
   }
 
   const pokemon = filteredItems[0];
